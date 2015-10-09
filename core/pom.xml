@@ -1,0 +1,36 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.malpeza</groupId>
+  <artifactId>blood_line.core</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>Blood Line Core API</name>
+  <description>Blood Line Core API</description>
+  <organization>
+  	<name>Malpeza</name>
+  	<url>Malpeza.com</url>
+  </organization>
+  <scm>
+  	<connection>git@github.com:malpeza/blood_line.git</connection>
+  	<url>https://github.com/malpeza/blood_line</url>
+  	<developerConnection>git@github.com:malpeza/blood_line.git</developerConnection>
+  </scm>
+  <issueManagement>
+  	<system>Github</system>
+  	<url>https://github.com/malpeza/blood_line/issues</url>
+  </issueManagement>
+  <inceptionYear>2015</inceptionYear>
+  <properties>
+  	<maven.compile.encoding>UTF-8</maven.compile.encoding>
+  	<maven.compile.source>1.8</maven.compile.source>
+  	<maven.compile.target>1.8</maven.compile.target>
+  	<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+  <dependencies>
+  	<dependency>
+  		<groupId>junit</groupId>
+  		<artifactId>junit</artifactId>
+  		<version>4.12</version>
+  		<scope>test</scope>
+  	</dependency>
+  </dependencies>
+</project>
