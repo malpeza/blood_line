@@ -18,7 +18,7 @@ public class Person {
 
 	public Person(final String name, final String lastname, final String email) {
 		if (Arrays.stream((new String[] { name, lastname, email })).anyMatch(property -> isNullOrEmpty(property))) {
-			throw new IllegalArgumentException();
+			throw new IllegalArgumentException("Properties can not be null, empty or white space."); 
 		}
 	}
 	

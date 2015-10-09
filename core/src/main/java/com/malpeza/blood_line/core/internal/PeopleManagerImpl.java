@@ -14,10 +14,11 @@ public class PeopleManagerImpl implements PeopleManager {
 
 	public void register(Person toRegister) {
 		if (this.repository == null) {
-			throw new IllegalStateException("PopleRepository is required to attend this message.");
+			throw new IllegalStateException("PeopleRepository is required to attend this message.");
 		}
+		
 		if (toRegister == null) {
-			throw new IllegalArgumentException();
+			throw new IllegalArgumentException("Person to register can not be null.");
 		}
 	}
 
