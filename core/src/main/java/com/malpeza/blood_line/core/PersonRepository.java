@@ -3,17 +3,20 @@
  * All rights reserved. Use is subject to license terms. 
  */
 
+/**
+ * 
+ */
 package com.malpeza.blood_line.core;
 
 /**
  * @author Lorenzo Solano Martínez <lsolano@malpeza.com>
  *
  */
-public interface PeopleManager {
+public interface PersonRepository {
 
-	void register(final Person toRegister);
+	void add(final Person toRegister);
 
-	void setRepository(final PersonRepository repository);
+	boolean has(final String email);
 
-	Person findByEmail(final String email);
+	Person retrieve(final String email);
 }
