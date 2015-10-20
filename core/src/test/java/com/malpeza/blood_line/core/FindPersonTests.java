@@ -21,11 +21,6 @@ public class FindPersonTests {
 	@Rule
 	public final Timeout globalTimeout = Timeout.millis(50);
 	
-	/*
-	 * 1. Notfound => Person.None
-	 * 2. Found => Must be equals 
-	 * 3. ?*/
-	
 	@Test
 	public void find_person_without_repository_should_throw_exception() {
 		thrown.expect(IllegalStateException.class);

@@ -14,20 +14,23 @@ import org.junit.rules.Timeout;
 import org.junit.runner.RunWith;
 
 @RunWith(Theories.class)
-public class InvalidPersonInstantiation {
+public class InvalidBloodTypeInstantiationTests {
 	@DataPoints
-	public static final String[] INVALID_STRING_PROPS = { null, "", "   ", "\n", "\t", "\n\r", "\r\n", "\r" };
+	public static final ABOGroup[] INVALID_ABOGroup = { null, ABOGroup.Unknown };
+
+	@DataPoints
+	public static final RhesusGroup[] INVALID_RhesusGroup = { null, RhesusGroup.Unknown };
 
 	@Rule
 	public final ExpectedException thrown = ExpectedException.none();
-	
+
 	@Rule
 	public final Timeout globalTimeout = Timeout.millis(50);
 
 	@Theory
-	public void create_person_with_invalid_fields(final String name, final String lastName, final String email) {
+	public void create_blood_type_with_invalid_groups(final ABOGroup aboGroup, final RhesusGroup rhGroup) {
 		thrown.expect(IllegalArgumentException.class);
 
-		new Person(name, lastName, email);
+		new BloodType(aboGroup, rhGroup);
 	}
 }

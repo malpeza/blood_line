@@ -5,6 +5,7 @@
 
 package com.malpeza.blood_line.core;
 
+import com.malpeza.blood_line.core.internal.DonorManagerImpl;
 import com.malpeza.blood_line.core.internal.PeopleManagerImpl;
 
 /**
@@ -19,6 +20,10 @@ public final class EntitiesFactory {
 
 	public static PeopleManager createPeopleManager() {
 		return new PeopleManagerImpl();
+	}
+
+	public static DonorManager createDonorManager() {
+		return new DonorManagerImpl();
 	}
 
 }
